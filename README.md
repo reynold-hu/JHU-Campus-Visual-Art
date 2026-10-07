@@ -58,12 +58,7 @@ campus website.
 
 ## Preview
 
-The repository preview artwork shows the visual direction; the scene image
-below is the campus overview used by the interactive browser.
-
-<p align="center">
-  <img src="public/covers/homewood-atlas.png" alt="Homewood Atlas preview" width="860" />
-</p>
+The scene image below is the campus overview used by the interactive browser.
 
 <p align="center">
   <img src="public/homewood/homewood-overview-v2.jpg" alt="Illustrated Homewood campus overview scene" width="860" />
