@@ -2,7 +2,7 @@ import type { Metadata } from "next";
 import "./globals.css";
 
 export const metadata: Metadata = {
-  title: "Homewood Atlas",
+  title: "JHU Homewood Field Notes",
   description: "A visual browser for wandering through Johns Hopkins University's Homewood campus.",
 };
 

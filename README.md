@@ -1,6 +1,6 @@
-# Homewood Atlas
+# JHU Homewood Field Notes
 
-Homewood Atlas is a browser-native visual explorer for Johns Hopkins University's Homewood campus.
+JHU Homewood Field Notes is a browser-native visual notebook for Johns Hopkins University's Homewood campus.
 
 The interface treats the campus as a set of connected visual scenes. Start with the overview, open a hotspot, move into a building or campus-life detail, and use the breadcrumb to return through the visual hierarchy.
 

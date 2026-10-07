@@ -1,7 +1,24 @@
 @import "tailwindcss";
 
-:root { color-scheme: dark; }
+:root { color-scheme: light; }
 * { box-sizing: border-box; }
-html, body { min-height: 100%; margin: 0; background: #050504; }
+html, body { min-height: 100%; margin: 0; background: #f5f4ef; color: #181817; }
 button, a { -webkit-tap-highlight-color: transparent; }
 button:focus-visible, a:focus-visible { outline: 2px solid #fcd34d; outline-offset: 4px; }
+
+.homewood-notes { --paper: #f5f4ef; --ink: #181817; --line: rgba(24,24,23,.14); background: var(--paper) !important; color: var(--ink) !important; }
+.homewood-notes [class*="bg-[#050504]"], .homewood-notes [class*="bg-black"] { background: var(--paper) !important; }
+.homewood-notes [class*="bg-black/35"] { background: rgba(236,234,225,.9) !important; }
+.homewood-notes [class*="text-white"], .homewood-notes [class*="text-zinc-950"] { color: var(--ink) !important; }
+.homewood-notes [class*="text-zinc-300"], .homewood-notes [class*="text-zinc-400"], .homewood-notes [class*="text-zinc-500"] { color: #686b60 !important; }
+.homewood-notes [class*="text-zinc-600"] { color: #858579 !important; }
+.homewood-notes [class*="border-white"] { border-color: var(--line) !important; }
+.homewood-notes [class*="bg-white/[0.02]"], .homewood-notes [class*="bg-white/[0.018]"], .homewood-notes [class*="bg-white/[0.025]"] { background: rgba(255,255,255,.45) !important; }
+.homewood-notes [class*="bg-zinc-950"] { background: #292c25 !important; color: #f7f5ef !important; }
+.homewood-notes [class*="hover:bg-zinc-800"]:hover { background: #52644e !important; }
+.homewood-notes [class*="text-cyan-200"] { color: #7a5039 !important; }
+.homewood-notes [class*="text-amber-200"] { color: #a84425 !important; }
+.homewood-notes [class*="text-emerald-200"] { color: #52644e !important; }
+.homewood-notes aside { background: #eceae1 !important; border-color: var(--line) !important; }
+.homewood-notes section { border-color: var(--line) !important; }
+.homewood-notes section > div:first-child { background-image: linear-gradient(rgba(24,24,23,.035) 1px,transparent 1px),linear-gradient(90deg,rgba(24,24,23,.035) 1px,transparent 1px) !important; }

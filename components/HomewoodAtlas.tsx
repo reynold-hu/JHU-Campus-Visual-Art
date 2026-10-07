@@ -271,7 +271,7 @@ export default function HomewoodAtlas() {
   };
 
   return (
-    <div className="min-h-screen bg-[#050504] text-white">
+    <div className="homewood-notes min-h-screen bg-[#f5f4ef] text-[#181817]">
       <div className="grid min-h-screen lg:grid-cols-[1fr_360px]">
         <section className="relative min-h-[720px] overflow-hidden border-r border-white/10">
           <div className="absolute inset-0 bg-[radial-gradient(circle_at_50%_32%,rgba(245,213,138,0.13),transparent_34%),linear-gradient(180deg,rgba(255,255,255,0.03),transparent_32%)]" />
