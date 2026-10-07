@@ -1,6 +1,6 @@
-# JHU Homewood Field Notes
+# JHU Homewood Campus Visual Archive
 
-JHU Homewood Field Notes is a browser-native visual notebook for Johns Hopkins University's Homewood campus.
+JHU Homewood Campus Visual Archive is a browser-native visual archive for illustrated campus references, architectural details, campus routes, and visual studies of Johns Hopkins University's Homewood campus.
 
 The interface treats the campus as a set of connected visual scenes. Start with the overview, open a hotspot, move into a building or campus-life detail, and use the breadcrumb to return through the visual hierarchy.
 

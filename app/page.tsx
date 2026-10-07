@@ -12,7 +12,7 @@ export default function HomewoodAtlasPage() {
         className="fixed left-6 top-20 z-40 inline-flex items-center gap-2 text-sm text-zinc-500 transition-colors hover:text-amber-200 md:left-10"
       >
         <ArrowLeftOutlined className="text-xs" />
-        JHU Homewood Field Notes
+        JHU Homewood Campus Visual Archive
       </Link>
       <HomewoodAtlas />
     </main>
