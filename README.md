@@ -1,45 +1,64 @@
 <p align="center">
-  <img src="public/jhu-logo.png" alt="Johns Hopkins University" width="180" />
-</p>
-
-<h1 align="center">JHU Homewood Campus Visual Archive</h1>
-
-<p align="center">
-  <strong>An illustrated browser for Johns Hopkins University's Homewood campus.</strong>
+  <img src="public/jhu-logo.png" alt="Johns Hopkins University" width="180"/>
 </p>
 
 <p align="center">
-  Architectural references · campus routes · visual studies · scene-based exploration
+  <strong>JHU Homewood Campus Visual Archive</strong>
 </p>
 
-<p align="center">
-  <a href="https://github.com/reynold-hu/JHU-Campus-Visual-Art">Repository</a> ·
-  <a href="http://localhost:3300">Local preview</a> ·
-  <a href="https://www.jhu.edu/">JHU context</a>
-</p>
+**JHU Homewood Campus Visual Archive is a browser-native visual study of
+Johns Hopkins University's Homewood campus.** Start from a wide illustrated
+campus scene; open a hotspot; move into Gilman Hall, Brody Learning Commons,
+The Beach, or a smaller architectural detail; return through the visual
+breadcrumb.
 
-<p align="center">
-  <img src="public/covers/homewood-atlas.png" alt="Illustrated Homewood campus overview" width="900" />
-</p>
+> **What this is:** a personal visual reference system for campus architecture,
+> routes, materials, and everyday campus rhythm.
+>
+> **What this is not:** an official Johns Hopkins University website, campus
+> map, archival collection, or university-endorsed product.
 
-## The idea
+```
+campus overview
+        │
+        ▼
+  ┌───────────────┐       ┌──────────────────┐
+  │ visual scene   │ ────▶ │ hotspot / region │
+  │ Homewood       │       │ Gilman / Brody   │
+  └───────┬───────┘       └────────┬─────────┘
+          │                        │
+          ▼                        ▼
+   campus-life detail       architectural study
+   The Beach / paths        clock / facade / rooms
+          │                        │
+          └───────────┬────────────┘
+                      ▼
+             breadcrumb back to context
+```
 
-Campus information is usually organized as a map, a facilities list, or a photo gallery. This project treats Homewood as a visual archive instead: a connected set of scenes that can be explored through buildings, paths, landmarks, and small campus-life details.
+## Why this exists
 
-Start with the overview, open a hotspot, move into Gilman Hall, Brody Learning Commons, The Beach, or a smaller architectural study, then return through the visual breadcrumb.
+Campus information is usually split between a facilities list, a map, and a
+photo gallery. Those formats are useful, but they flatten the feeling of a
+place.
 
-## What it contains
+This project keeps the visual relationships visible: buildings sit inside a
+campus, paths connect spaces, and small details lead back to a larger scene.
+The result is closer to an illustrated field reference than a conventional
+campus website.
 
-- **Campus overview** — a broad illustrated view with clickable regions.
-- **Architectural studies** — Gilman Hall, the clock tower, entrances, brick facades, and material details.
-- **Learning spaces** — Brody Learning Commons, quiet reading, group rooms, and circulation layers.
-- **Campus rhythm** — The Beach, diagonal paths, blankets, reading, and everyday movement.
-- **Scene hierarchy** — every visual detail remains connected to its parent place.
-- **Soft transitions** — scene changes, hotspot reveals, breadcrumb navigation, and a warm paper interface.
+## What is included
+
+- **Campus overview** — a broad illustrated Homewood scene with clickable regions.
+- **Gilman Hall** — clock tower, entrance, and brick facade studies.
+- **Brody Learning Commons** — quiet reading, group rooms, and entry-level views.
+- **The Beach** — blankets, diagonal paths, and everyday campus rhythm.
+- **Scene hierarchy** — every detail keeps a parent scene and a way back.
+- **Warm paper interface** — the visual language follows the companion Reynold Hu bio site.
 
 ## Quick start
 
-```bash
+```sh
 git clone git@github.com:reynold-hu/JHU-Campus-Visual-Art.git
 cd JHU-Campus-Visual-Art
 npm install
@@ -48,57 +67,60 @@ npm run dev
 
 Open <http://localhost:3000>.
 
-To create a production build:
+For a production check:
 
-```bash
+```sh
 npm run build
 npm run start
 ```
 
-## How it works
+## How the project is shaped
+
+The scene graph lives in [`components/HomewoodAtlas.tsx`](components/HomewoodAtlas.tsx).
+Each scene owns its image, description, note, parent scene, and hotspots. A
+new building or campus detail is added as a connected scene node rather than
+as an unrelated page.
 
 ```text
-Campus overview
-      ↓
-Clickable hotspot
-      ↓
-Focused visual scene
-      ↓
-Architectural / campus-life detail
-      ↓
-Breadcrumb back to context
+app/page.tsx              standalone route and metadata
+components/HomewoodAtlas.tsx
+                          scenes, hotspots, transitions, breadcrumbs
+public/homewood/          generated campus scene images
+public/covers/            repository preview artwork
+public/jhu-logo.png       README context mark
 ```
 
-The scene graph lives in `components/HomewoodAtlas.tsx`. Each scene defines its image, description, note, parent scene, and hotspots. Adding a new building or detail means adding a new scene node and connecting it to the existing visual hierarchy.
+## Honest limits
 
-## Project structure
-
-```text
-app/
-  page.tsx                 # standalone page and metadata
-  globals.css              # warm visual system
-components/
-  HomewoodAtlas.tsx        # scene graph and browser interaction
-public/
-  homewood/                # generated campus scenes
-  covers/                  # repository preview artwork
-  jhu-logo.png             # README context mark
-```
+- The images are illustrative visual references, not measured architectural
+  documentation.
+- The scene coordinates are curated interface hotspots, not GIS data.
+- The project currently favors visual exploration over exhaustive campus
+  coverage.
+- The JHU logo and institutional names remain the property of Johns Hopkins
+  University; their presence here does not imply endorsement.
 
 ## Image provenance
 
-The campus scenes in `public/homewood/` and the preview artwork in `public/covers/` were generated with GPT for this personal visual study. They are illustrative references and do not represent official Johns Hopkins University photography, architectural records, or an official university asset library.
+The campus scene images in `public/homewood/` and the preview artwork in
+`public/covers/` were generated with GPT for this personal visual study. They
+are mock references and do not represent official Johns Hopkins University
+photography, architectural records, or an official university asset library.
 
-The Johns Hopkins University name and logo belong to Johns Hopkins University. The logo is used for identification and context only. This project does not claim university endorsement or affiliation.
-
-Full provenance notes are in [ASSETS.md](./ASSETS.md).
+More detail is recorded in [`ASSETS.md`](ASSETS.md).
 
 ## Copyright and usage
 
 Copyright © 2026 Reynold Hu. All rights reserved.
 
-This repository is published for review and controlled collaboration. No open-source license is granted. The source code, generated images, visual compositions, copy, and interaction design may not be independently copied, republished, relicensed, packaged, or used commercially without written permission.
+This is a controlled collaboration repository. No open-source license is
+granted. The source code, generated images, visual compositions, copy, and
+interaction design may not be independently copied, republished, relicensed,
+packaged, or used commercially without written permission.
 
-GitHub forks are the approved collaboration path. A fork must preserve this README, the copyright notice, asset provenance, and attribution. A fork does not grant permission to distribute an unrelated standalone copy or remove the rights notices.
+GitHub forks are the approved collaboration path. A fork must preserve this
+README, the copyright notice, asset provenance, and attribution. A fork does
+not grant permission to distribute an unrelated standalone copy or remove
+the rights notices.
 
-See [LICENSE](./LICENSE).
+See [`LICENSE`](LICENSE) and [`ASSETS.md`](ASSETS.md).
