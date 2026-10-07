@@ -3,10 +3,10 @@
 </p>
 
 <p align="center">
-  <strong>JHU Homewood Campus Visual Archive</strong>
+  <strong>JHU Homewood Campus Visual Art</strong>
 </p>
 
-**JHU Homewood Campus Visual Archive is a browser-native visual study of
+**JHU Homewood Campus Visual Art is a browser-native visual study of
 Johns Hopkins University's Homewood campus.** Start from a wide illustrated
 campus scene; open a hotspot; move into Gilman Hall, Brody Learning Commons,
 The Beach, or a smaller architectural detail; return through the visual

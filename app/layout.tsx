@@ -2,7 +2,7 @@ import type { Metadata } from "next";
 import "./globals.css";
 
 export const metadata: Metadata = {
-  title: "JHU Homewood Campus Visual Archive",
+  title: "JHU Homewood Campus Visual Art",
   description: "Illustrated campus references and visual studies of Johns Hopkins University's Homewood campus.",
 };
 
